@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-
-import { GifItem } from "../components/GifItem";
+import { GifItem } from "../components";
 import { useFetchGifts } from "../hooks/useFetchGifts";
 export const GifGrid = ({ category }) => {
   const { images, isLoading } = useFetchGifts(category);
