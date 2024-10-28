@@ -4,7 +4,8 @@ import { AddCategory } from "../../src/components";
 describe("Pruebas en <AddCategory />", () => {
   const category = "HxH";
   test("debe cambiar el valor del input", () => {
-    render(<AddCategory onAddCategory={() => {}} />);
+    const onAddCategoryMock = jest.fn();
+    render(<AddCategory onAddCategory={onAddCategoryMock} />);
 
     const inputField = screen.getByRole("textbox");
 
