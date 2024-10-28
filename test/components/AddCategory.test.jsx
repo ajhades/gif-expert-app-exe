@@ -1,5 +1,5 @@
-const { render, screen, fireEvent } = require("@testing-library/react");
-const { AddCategory } = require("../../src/components");
+import { render, screen, fireEvent } from "@testing-library/react";
+import { AddCategory } from "../../src/components";
 
 describe("Pruebas en <AddCategory />", () => {
   const category = "HxH";
