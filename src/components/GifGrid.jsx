@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { GifItem } from "../components";
 import { useFetchGifts } from "../hooks/useFetchGifts";
 export const GifGrid = ({ category }) => {
@@ -14,4 +15,8 @@ export const GifGrid = ({ category }) => {
       </ol>
     </article>
   );
+};
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
 };
