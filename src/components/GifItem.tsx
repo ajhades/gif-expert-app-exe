@@ -1,4 +1,4 @@
-import PropTypes, { string } from "prop-types";
+import PropTypes from "prop-types";
 import { IGifItem } from "../interfaces";
 export const GifItem = ({ title, url }: IGifItem) => {
   return (
