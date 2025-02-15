@@ -1,5 +1,6 @@
-import PropTypes from "prop-types";
-export const GifItem = ({ title, url }) => {
+import PropTypes, { string } from "prop-types";
+import { IGifItem } from "../interfaces";
+export const GifItem = ({ title, url }: IGifItem) => {
   return (
     <div className="card">
       <img src={url} alt={title} />

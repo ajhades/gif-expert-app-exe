@@ -1,19 +1,20 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-export const AddCategory = ({ onAddCategory }) => {
+export const AddCategory = ({ onAddCategory }: { onAddCategory: (name: string) => void }) => {//+
   const [name, setName] = useState("");
 
-  const onChange = ({ target }) => {
+  const onChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {//+
     setName(target.value);
   };
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {//+
     event.preventDefault();
     if (name.trim().length <= 1) return;
-    // setCategories((categories) => [...categories, name]);
+    // setCategories((categories) => [...categories, name]);//-
     setName("");
     onAddCategory(name);
   };
+//+
   return (
     <form onSubmit={onSubmit} aria-label="form">
       <input
