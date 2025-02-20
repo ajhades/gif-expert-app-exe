@@ -12,9 +12,9 @@ describe("Prueba a hook useFetchGifs", () => {
 
   test("debe retornar arreglo de imagnes e isLoading en false", async () => {
     const { result } = renderHook(() => useFetchGifts("Saitama"));
-    await waitFor(() =>
+    await waitFor(() => {
       expect(result.current.images.length).toBeGreaterThan(0)
-    );
+    });
 
     const { images, isLoading } = result.current;
 
