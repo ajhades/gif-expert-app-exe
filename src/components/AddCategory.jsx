@@ -10,7 +10,6 @@ export const AddCategory = ({ onAddCategory }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     if (name.trim().length <= 1) return;
-    // setCategories((categories) => [...categories, name]);
     setName("");
     onAddCategory(name);
   };
