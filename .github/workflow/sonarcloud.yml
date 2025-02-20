@@ -38,6 +38,12 @@ jobs:
 
     - name: Build the project
       run: npm run build
+    
+    - name: List Coverage Directory
+      run: ls -la coverage/
+
+    - name: Display lcov.info
+      run: cat coverage/lcov.info
 
     - name: Run SonarCloud Scan
       env:
