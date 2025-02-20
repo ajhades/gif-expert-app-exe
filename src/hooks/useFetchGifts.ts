@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { getGifs } from "../helpers/getGifts";
-export const useFetchGifts = (category) => {
-  const [images, setImages] = useState([]);
+import { IGif } from "../interfaces";
+export const useFetchGifts = (category: string) => {
+  const [images, setImages] = useState<IGif[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const getImages = async (category) => {
-    const newImages = await getGifs(category);
+  const getImages = async (category: string) => {
+    const newImages: IGif[] = await getGifs(category);
     setImages(newImages);
     setIsLoading(false);
   };
