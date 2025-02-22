@@ -8,5 +8,5 @@ module.exports = {
     "!src/**/index.js" // Excluye archivos index.js si no son relevantes
   ],
   coverageDirectory: "coverage",
-  setupFiles: ['whatwg-fetch','<rootDir>/jest.setup.js'],
+  setupFiles: ['whatwg-fetch'],
 };
