@@ -63,7 +63,7 @@ jobs:
             -Dsonar.test.inclusions=**/*.test.js,**/*.test.jsx
             -Dsonar.scm.disabled=true
             -Dsonar.sources=src
-            -Dsonar.tests=src
+            -Dsonar.tests=test
             -Dsonar.analysis.mode=publish
             -Dsonar.language=js
             -Dsonar.verbose=true
