@@ -8,7 +8,7 @@ export const GifExpertApp = () => {
   };
   return (
     <>
-      <h1> GifExpertApp</h1>
+      <h1> GifExpertApp prueba</h1>
       <AddCategory onAddCategory={onAddCategory} />
       {categories.map((category) => (
         <GifGrid key={category} category={category} />
