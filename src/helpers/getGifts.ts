@@ -1,4 +1,4 @@
-import { IGif } from "../interfaces/Gif";
+import { IGif, IGifAPI } from "../interfaces/Gif";
 
 const api_key = process.env.VITE_GIPHY_KEY;
 const limit = 2;
