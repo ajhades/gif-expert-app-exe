@@ -7,7 +7,7 @@ export const getGifs = async (category: string): Promise<IGif[]> => {
   const response = await fetch(url);
   const { data } = await response.json();
 
-  const gifs: IGif[] = data.map((img:any) => ({
+  const gifs: IGif[] = data.map((img:IGifAPI) => ({
     id: img.id,
     title: img.title,
     url: img.images.downsized_medium.url,

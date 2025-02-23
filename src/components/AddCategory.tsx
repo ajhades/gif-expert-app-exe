@@ -6,10 +6,10 @@ export const AddCategory = ({ onAddCategory }: IAddCategoryProps) => {
   const [name, setName] = useState<string>("");
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
+    setName((event.currentTarget as HTMLInputElement).value);
   };
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (event: React.FormEvent<HTMLFormElement> | any) => {
     event.preventDefault();
     if (name.trim().length <= 1) return;
     
