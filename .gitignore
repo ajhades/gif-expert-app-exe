@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 .env
+.env.test
+
+coverage/
+# SonarCloud analysis
+.sonar/

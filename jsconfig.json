@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "CommonJS",
+    "target": "ES6"
+  },
+  "exclude": ["node_modules"],
+  "typeAcquisition": {
+      "include": [
+          "jest"
+      ]
+  }
+}
