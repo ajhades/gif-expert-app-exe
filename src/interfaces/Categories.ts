@@ -3,5 +3,5 @@ export interface ICategory {
 }
 
 export interface IAddCategoryProps {
-  onAddCategory: (name: string) => void;
+  onAddCategory: (name: string) => void;  // 'name' is used to add a category
 }

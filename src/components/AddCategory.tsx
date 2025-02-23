@@ -9,8 +9,7 @@ export const AddCategory = ({ onAddCategory }: IAddCategoryProps) => {
     setName((event.currentTarget as HTMLInputElement).value);
   };
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement> | any) => {
-    event.preventDefault();
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     if (name.trim().length <= 1) return;
     
     onAddCategory(name);
