@@ -6,15 +6,18 @@ export const AddCategory = ({ onAddCategory }: IAddCategoryProps) => {
   const [name, setName] = useState<string>("");
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.currentTarget.value);
+    const currentName = event.target.value as string;
+    setName(currentName);
   };
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (name.trim().length <= 1) return;
-    
-    onAddCategory(name);
-    setName("");
+  const onSubmit = (event: React.FormEvent<HTMLFormElement> | unknown) => {
+    if (event instanceof Event) {
+      event.preventDefault();
+      if (name.trim().length <= 1) return;
+      
+      onAddCategory(name);
+      setName("");
+    }
   };
 
   return (

@@ -3,5 +3,9 @@ export interface ICategory {
 }
 
 export interface IAddCategoryProps {
-  onAddCategory: (name: string) => void;  // 'name' is the parameter for adding a category
+  /**
+   * Callback function to add a category.
+   * @param name - The name of the category to add.
+   */
+  onAddCategory: (name: string) => void;
 }
