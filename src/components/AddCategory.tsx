@@ -10,6 +10,7 @@ export const AddCategory = ({ onAddCategory }: IAddCategoryProps) => {
   };
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (name.trim().length <= 1) return;
     
     onAddCategory(name);
