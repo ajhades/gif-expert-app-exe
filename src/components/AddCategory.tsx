@@ -6,8 +6,10 @@ export const AddCategory = ({ onAddCategory }: IAddCategoryProps) => {
   const [name, setName] = useState<string>("");
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const currentName = event.target.value as string;
-    setName(currentName);
+    if (event.target instanceof HTMLInputElement) {
+      const currentName = event.target.value;
+      setName(currentName);
+    }
   };
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement> | unknown) => {
