@@ -1,0 +1,4 @@
+tools:
+  - eslint
+ignore:
+  - "Avoid type assertion"
